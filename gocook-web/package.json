@@ -7,9 +7,14 @@
     "react-dom": "^16.4.2",
     "react-scripts": "1.1.5"
   },
+  "devDependencies": {
+    "flow-bin": "^0.79.1",
+    "flow-typed": "^2.5.1"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "flow": "flow",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   }
