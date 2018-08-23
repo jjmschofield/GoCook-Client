@@ -1,14 +1,13 @@
-# GoCook Clients
+# GoCook Web
 
-You will find here the web client for GoCook!
+This is the Web client for GoCook. 
 
-Right now there is only a web client in React, however in the future there might also be a mobile client in React Native!
-
-# Getting Started
+## Getting Started
 Have `node` and `yarn` installed then:
 
 ```$xslt
 $ yarn install
+...
 $ yarn start
 ```
 
@@ -19,6 +18,8 @@ This was a little bit hookey to setup - as Heroku is not expecting a project to 
 
 ```$xslt
 $ heroku buildpacks:set https://github.com/timanovsky/subdir-heroku-buildpack -a go-cook-web
+...
 $ heroku buildpacks:add heroku/nodejs -a go-cook-web
+...
 $ heroku config:set PROJECT_PATH=gocook-web -a go-cook-web
 ```
