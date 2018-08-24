@@ -25,16 +25,18 @@ class AppNavigationTabs extends Component<Props, State> {
 
     render() {
         return (
-            <Tabs
-                value={this.state.value}
-                indicatorColor="primary"
-                textColor="primary"
-                onChange={this.handleTabChange}
-            >
-                <Tab label="Today" href="#today" icon={<WbSunny/>}/>
-                <Tab label="Recipes" href="#recipes" icon={<BookmarkBorder/>}/>
-                <Tab label="Plans" href="#plans" icon={<CalendarToday/>}/>
-            </Tabs>
+            <div>
+                <Tabs
+                    value={this.state.value}
+                    indicatorColor="primary"
+                    textColor="primary"
+                    onChange={this.handleTabChange}
+                >
+                    <Tab label="Today" href="#today" icon={<WbSunny/>}/>
+                    <Tab label="Recipes" href="#recipes" icon={<BookmarkBorder/>}/>
+                    <Tab label="Plans" href="#plans" icon={<CalendarToday/>}/>
+                </Tabs>
+            </div>
         );
     };
 }
