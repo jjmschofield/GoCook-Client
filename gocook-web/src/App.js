@@ -1,9 +1,7 @@
 // @flow
 import React, {Component} from 'react';
 
-import MenuBar from './components/MenuBar';
-import logo from './logo.svg';
-import './App.css';
+import AppToolbar from './components/AppToolbar';
 
 type Props = {};
 
@@ -11,7 +9,7 @@ class App extends Component<Props> {
     render() {
         return (
             <div className="App">
-                <MenuBar />
+                <AppToolbar />
             </div>
         );
     }

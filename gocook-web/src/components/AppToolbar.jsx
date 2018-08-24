@@ -10,7 +10,7 @@ import CreateButton from './CreateButton';
 
 type Props = {};
 
-class MenuBar extends Component<Props> {
+class AppToolbar extends Component<Props> {
     render() {
         return (
             <Toolbar>
@@ -23,5 +23,5 @@ class MenuBar extends Component<Props> {
     };
 }
 
-export default MenuBar;
+export default AppToolbar;
 
