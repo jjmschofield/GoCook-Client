@@ -1,23 +1,25 @@
 // @flow
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 
 import Toolbar from '@material-ui/core/Toolbar';
-import { withStyles } from '@material-ui/core/styles';
+import {withStyles} from '@material-ui/core/styles';
 
 import AppNavigationTabs from './AppNavigationTabs';
-import SearchInput from './SearchInput';
-import AvatarMenu from './AvatarMenu';
-import CreateButton from './CreateButton';
+import SearchInput from '../inputs/SearchInput';
+import AvatarMenu from '../menus/AvatarMenu';
+import CreateButton from '../inputs/CreateButton';
+import NavRouteDefinition from "./NavRouteDefinition";
 
 type Props = {
-    classes: any
+    classes: any,
+    routes: NavRouteDefinition[]
 };
 
 const styles = {
     grow: {
         flexGrow: 1,
     },
-    row:{
+    row: {
         display: "flex",
         flexGrow: "0.05",
         justifyContent: "space-between",
@@ -27,11 +29,11 @@ const styles = {
 
 class AppToolbar extends Component<Props> {
     render() {
-        const { classes } = this.props;
+        const {classes} = this.props;
         return (
             <Toolbar>
                 <div className={classes.grow}>
-                    <AppNavigationTabs />
+                    <AppNavigationTabs routes={this.props.routes}/>
                 </div>
                 <div className={classes.row}>
                     <SearchInput/>
