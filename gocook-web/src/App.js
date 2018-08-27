@@ -1,6 +1,6 @@
 // @flow
 import React, {Component} from 'react';
-import {Switch, Route} from 'react-router'
+import {Switch, Route, Redirect} from 'react-router';
 
 import AppToolbar from './components/app/AppToolbar';
 
@@ -15,11 +15,12 @@ class App extends Component<Props> {
     render() {
         return (
             <React.Fragment>
-                <AppToolbar routes={NAV_ROUTES}/>
+                <AppToolbar routes={Object.values(NAV_ROUTES)}/>
                 <Switch>
-                    <Route path="/today" component={TodayView}/>
-                    <Route path="/recipes" component={RecipesView}/>
-                    <Route path="/plans" component={PlansView}/>
+                    <Route path={NAV_ROUTES.TODAY.path} component={TodayView}/>
+                    <Route path={NAV_ROUTES.RECIPES.path} component={RecipesView}/>
+                    <Route path={NAV_ROUTES.PLANS.path} component={PlansView}/>
+                    <Redirect to={NAV_ROUTES.TODAY.path} />
                 </Switch>
             </React.Fragment>
         );
