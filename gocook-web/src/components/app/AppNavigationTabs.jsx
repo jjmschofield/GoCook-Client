@@ -18,6 +18,7 @@ type State = {
 class AppNavigationTabs extends Component<Props, State> {
     constructor(props: Props) {
         super(props);
+        
     }
 
     state = {
@@ -31,9 +32,11 @@ class AppNavigationTabs extends Component<Props, State> {
         this.props.history.push(this.props.routes[selectedTabIndex].path);
     };
 
-    renderTabs(){
-        return this.props.routes.map((route)=>{
-            return <Tab label={route.name} icon={route.icon}/>
+    renderTabs() {
+        return this.props.routes.map((route) => {
+            if (route.enabled) {
+                return <Tab label={route.name} icon={route.icon}/>
+            }
         });
     }
 
@@ -46,7 +49,7 @@ class AppNavigationTabs extends Component<Props, State> {
                     textColor="primary"
                     onChange={this.handleTabChange}
                 >
-                    { this.renderTabs() }
+                    {this.renderTabs()}
                 </Tabs>
             </div>
         );

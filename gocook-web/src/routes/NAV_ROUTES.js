@@ -7,9 +7,9 @@ import CalendarToday from '@material-ui/icons/CalendarToday';
 import WbSunny from '@material-ui/icons/WbSunny';
 
 const NAV_ROUTES = {
-    TODAY: new NavRouteDefinition('/today', 'Today', <WbSunny/>),
-    RECIPES: new NavRouteDefinition('/recipes', 'Recipes', <BookmarkBorder/>),
-    PLANS: new NavRouteDefinition('/plans', 'Plans', <CalendarToday/>),
+    TODAY: new NavRouteDefinition('/today', 'Today', <WbSunny/>, true),
+    RECIPES: new NavRouteDefinition('/recipes', 'Recipes', <BookmarkBorder/>, true),
+    PLANS: new NavRouteDefinition('/plans', 'Plans', <CalendarToday/>, true),
 };
 
 export default NAV_ROUTES;
