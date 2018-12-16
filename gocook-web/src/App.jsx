@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { Auth } from './lib/auth'
 
 import { Router } from "./routes";
-import MobileMainNav from "./components/app/MobileMainNav";
+import MobileMainNav from "./components/nav/MobileMainNav";
 
 type Props = {
     auth: Auth,
@@ -16,7 +16,6 @@ class App extends Component<Props> {
         return (
             <React.Fragment>
                 <Router auth={auth}/>
-                { auth.isAuthenticated() && <MobileMainNav />}
             </React.Fragment>
         )
     }

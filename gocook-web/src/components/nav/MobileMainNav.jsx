@@ -19,11 +19,12 @@ const styles = {
     toolbar: {
         flexGrow: 1,
         display: 'flex',
-        position: 'absolute',
+        position: 'fixed',
         left: 0,
         bottom: 0,
         right: 0,
-    },
+        backgroundColor: '#fff',
+    }
 };
 
 class MobileMainNav extends Component<Props> {
