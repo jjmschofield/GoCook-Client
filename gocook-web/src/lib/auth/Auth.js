@@ -9,7 +9,7 @@ export default class Auth {
         domain: 'jjmschofield.eu.auth0.com',
         clientID: '2mrPi0oy9a9yqdlsVwaY3V8erCgEo5Fu',
         audience: 'https://go-cook',
-        redirectUri: 'http://localhost:3000/login/callback',
+        redirectUri: `${getHost()}/login/callback`,
         responseType: 'token id_token',
         scope: 'openid'
     });
@@ -108,3 +108,7 @@ export default class Auth {
         this.expiresAt = localStorage.getItem('auth_expires');
     }
 }
+
+const getHost = () => {
+    return `${window.location.protocol}//${window.location.hostname}${(window.location.port ? ':' + window.location.port : '')}`;
+};
