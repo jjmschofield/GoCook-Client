@@ -2,9 +2,8 @@
 import React, { Component } from 'react';
 import { Auth } from './lib/auth'
 
-import AppToolbar from './components/app/AppToolbar';
-import NAV_ROUTES from './routes/NAV_ROUTES';
-import MainView from "./components/app/MainView";
+import { Router } from "./routes";
+import MobileMainNav from "./components/nav/MobileMainNav";
 
 type Props = {
     auth: Auth,
@@ -16,8 +15,7 @@ class App extends Component<Props> {
 
         return (
             <React.Fragment>
-                {auth.isAuthenticated() && <AppToolbar auth={auth} routes={Object.values(NAV_ROUTES)}/>}
-                <MainView auth={auth}/>
+                <Router auth={auth}/>
             </React.Fragment>
         )
     }
