@@ -1,30 +1,36 @@
 // @flow
 import React, { Component } from 'react';
 
-import Toolbar from '@material-ui/core/Toolbar';
 import { withStyles } from '@material-ui/core/styles';
-import DeleteOutlinedIcon from '@material-ui/icons/DeleteOutlined';
 
-import Tabs from "@material-ui/core/Tabs/Tabs";
-import Tab from "@material-ui/core/Tab/Tab";
+
 import { withRouter } from "react-router";
 
 import Button from '@material-ui/core/Button';
 import SaveIcon from '@material-ui/icons/Save';
+import DashboardIcon from '@material-ui/icons/Dashboard';
+import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
+import CreateIcon from '@material-ui/icons/Create';
+import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
+import PersonIcon from '@material-ui/icons/Person';
 
 type Props = {
     classes: any,
 };
 
 const styles = {
-    grow: {
+    toolbar: {
         flexGrow: 1,
+        display: 'flex',
+        position:'absolute',
+        left:0,
+        bottom:0,
+        right:0,
     },
-    row: {
-        display: "flex",
-        flexGrow: "0.05",
-        justifyContent: "space-between",
-        flexDirection: "row",
+    button: {
+        flexGrow: 1,
+        display: 'flex',
+        borderRadius: '0px'
     }
 };
 
@@ -44,25 +50,23 @@ class MobileMainNav extends Component<Props> {
         const { classes } = this.props;
 
         return (
-            <Toolbar>
-                <div className={classes.grow}>
-                    <Button className={classes.grow} variant="contained" size="small">
-                        <SaveIcon />
-                    </Button>
-                    <Button className={classes.grow} variant="contained" size="small">
-                        <SaveIcon />
-                    </Button>
-                    <Button className={classes.grow} variant="contained" size="small">
-                        <SaveIcon />
-                    </Button>
-                    <Button className={classes.grow} variant="contained" size="small">
-                        <SaveIcon />
-                    </Button>
-                    <Button className={classes.grow} variant="contained" size="small">
-                        <SaveIcon />
-                    </Button>
-                </div>
-            </Toolbar>
+            <div className={classes.toolbar}>
+                <Button className={classes.button} size="small">
+                    <DashboardIcon />
+                </Button>
+                <Button className={classes.button} size="small">
+                    <FavoriteBorderIcon />
+                </Button>
+                <Button className={classes.button} size="small">
+                    <CreateIcon />
+                </Button>
+                <Button className={classes.button} size="small">
+                    <ShoppingCartIcon />
+                </Button>
+                <Button className={classes.button} size="small">
+                    <PersonIcon />
+                </Button>
+            </div>
         );
     };
 }
