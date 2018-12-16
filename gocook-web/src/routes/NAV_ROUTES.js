@@ -12,6 +12,7 @@ const NAV_ROUTES = {
     PLANS: new NavRouteDefinition('/plans', 'Plans', <CalendarToday/>, true),
     LOGIN: new NavRouteDefinition('/login', null, null, false),
     LOGIN_CALLBACK: new NavRouteDefinition('/login/callback', null, null, false),
+    HOME: new NavRouteDefinition('/', null, null, false),
 };
 
 export default NAV_ROUTES;
