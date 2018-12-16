@@ -1,7 +1,7 @@
 // @flow
 import React from 'react';
 import CircularProgress from '@material-ui/core/CircularProgress';
-import Auth from "../../lib/auth";
+import Auth from "../../lib/auth/Auth";
 import NAV_ROUTES from "../NAV_ROUTES";
 
 type Props = {
