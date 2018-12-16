@@ -15,6 +15,10 @@ const HomeView = ({ auth }) => {
                 Login
             </Button>
             }
+            <div>
+                <br />
+                <img src="https://i.giphy.com/media/demgpwJ6rs2DS/giphy.webp" />
+            </div>
         </React.Fragment>
     );
 };
