@@ -20,36 +20,12 @@ class AppNavigationTabs extends Component<Props, State> {
         super(props);
     }
 
-    state = {
-        activeTabIndex: 0
-    };
 
-    handleTabChange = (event: Event, selectedTabIndex: number) => {
-        this.setState({
-            activeTabIndex: selectedTabIndex
-        });
-        this.props.history.push(this.props.routes[selectedTabIndex].path);
-    };
-
-    renderTabs() {
-        return this.props.routes.map((route) => {
-            if (route.enabled) {
-                return <Tab label={route.name} icon={route.icon}/>
-            }
-        });
-    }
 
     render() {
         return (
             <div>
-                <Tabs
-                    value={this.state.activeTabIndex}
-                    indicatorColor="primary"
-                    textColor="primary"
-                    onChange={this.handleTabChange}
-                >
-                    {this.renderTabs()}
-                </Tabs>
+
             </div>
         );
     };
