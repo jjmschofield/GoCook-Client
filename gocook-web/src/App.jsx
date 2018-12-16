@@ -16,7 +16,7 @@ class App extends Component<Props> {
 
         return (
             <React.Fragment>
-                {auth.isAuthenticated() && <AppToolbar routes={Object.values(NAV_ROUTES)}/>}
+                {auth.isAuthenticated() && <AppToolbar auth={auth} routes={Object.values(NAV_ROUTES)}/>}
                 <MainView auth={auth}/>
             </React.Fragment>
         )

@@ -1,16 +1,19 @@
 // @flow
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 
 import Toolbar from '@material-ui/core/Toolbar';
-import {withStyles} from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
 
 import AppNavigationTabs from './AppNavigationTabs';
 import SearchInput from '../inputs/SearchInput';
 import AvatarMenu from '../menus/AvatarMenu';
 import CreateButton from '../inputs/CreateButton';
+import LogoutButton from '../inputs/LogoutButton';
 import NavRouteDefinition from "./NavRouteDefinition";
+import Auth from '../../lib/auth/Auth';
 
 type Props = {
+    auth: Auth,
     classes: any,
     routes: NavRouteDefinition[]
 };
@@ -29,7 +32,7 @@ const styles = {
 
 class AppToolbar extends Component<Props> {
     render() {
-        const {classes} = this.props;
+        const { classes, auth } = this.props;
         return (
             <Toolbar>
                 <div className={classes.grow}>
@@ -39,6 +42,7 @@ class AppToolbar extends Component<Props> {
                     <SearchInput/>
                     <AvatarMenu/>
                     <CreateButton/>
+                    <LogoutButton auth={auth}/>
                 </div>
             </Toolbar>
         );
