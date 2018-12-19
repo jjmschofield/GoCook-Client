@@ -1,7 +1,8 @@
 // @flow
 import React, { Component } from 'react';
 import { withRouter } from "react-router";
-import { withStyles } from '@material-ui/core/styles';
+import styled from 'styled-components';
+
 import DashboardIcon from '@material-ui/icons/Dashboard';
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import CreateIcon from '@material-ui/icons/Create';
@@ -12,19 +13,8 @@ import MobileNavButton from './MobileNavButton';
 import { ROUTES } from '../../routes';
 
 type Props = {
-    classes: any,
-};
-
-const styles = {
-    toolbar: {
-        flexGrow: 1,
-        display: 'flex',
-        position: 'fixed',
-        left: 0,
-        bottom: 0,
-        right: 0,
-        backgroundColor: '#fff',
-    }
+    history: any,
+    className: string
 };
 
 class MobileMainNav extends Component<Props> {
@@ -32,39 +22,56 @@ class MobileMainNav extends Component<Props> {
         this.props.history.push(route);
     }
 
-    render() {
-        const { classes } = this.props;
+    isActiveRoute(route) {
+        return window.location.href.includes(route);
+    }
 
+    render() {
         return (
-            <div className={classes.toolbar}>
+            <div className={this.props.className}>
                 <MobileNavButton route={ROUTES.BROWSE}
                                  icon={<DashboardIcon/>}
                                  onClick={this.handleClick.bind(this)}
-                                 className={classes.button}/>
+                                 active={this.isActiveRoute(ROUTES.BROWSE)}
+                />
 
                 <MobileNavButton route={ROUTES.FAVORITES}
                                  icon={<FavoriteBorderIcon/>}
                                  onClick={this.handleClick.bind(this)}
-                                 className={classes.button}/>
+                                 active={this.isActiveRoute(ROUTES.FAVORITES)}
+                />
 
                 <MobileNavButton route={ROUTES.AUTHOR}
                                  icon={<CreateIcon/>}
                                  onClick={this.handleClick.bind(this)}
-                                 className={classes.button}/>
+                                 active={this.isActiveRoute(ROUTES.AUTHOR)}
+                />
 
                 <MobileNavButton route={ROUTES.SHOPPING}
                                  icon={<ShoppingCartIcon/>}
                                  onClick={this.handleClick.bind(this)}
-                                 className={classes.button}/>
+                                 active={this.isActiveRoute(ROUTES.SHOPPING)}
+                />
 
                 <MobileNavButton route={ROUTES.USER_PROFILE}
                                  icon={<PersonIcon/>}
                                  onClick={this.handleClick.bind(this)}
-                                 className={classes.button}/>
+                                 active={this.isActiveRoute(ROUTES.USER_PROFILE)}
+                />
             </div>
         );
     };
 }
 
-export default withRouter(withStyles(styles)(MobileMainNav));
+const StyledMobileNav = styled(MobileMainNav)`
+        display: flex;
+        flex-grow: 1;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-color: #fff;
+    `;
+
+export default withRouter(StyledMobileNav);
 
