@@ -17,7 +17,8 @@
   },
   "devDependencies": {
     "flow-bin": "^0.79.1",
-    "flow-typed": "^2.5.1"
+    "flow-typed": "^2.5.1",
+    "lorem-ipsum": "^1.0.6"
   },
   "scripts": {
     "start": "react-scripts start",

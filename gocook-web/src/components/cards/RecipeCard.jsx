@@ -1,25 +1,20 @@
 import React from 'react';
-import Card from '@material-ui/core/Card';
-import CardMedia from '@material-ui/core/CardMedia';
-import CardContent from '@material-ui/core/CardContent';
-import Typography from '@material-ui/core/Typography';
-import styled from 'styled-components';
-
-const StyledCardMedia = styled(CardMedia)`
-    height: 250px
-`;
+import Card from './Card';
+import CardMedia from './CardMedia';
+import CardContent from './CardContent';
+import loremIpsum from 'lorem-ipsum';
 
 const RecipeCard = () => {
     return (
         <Card>
-            <StyledCardMedia
-                image="https://material-ui.com/static/images/cards/paella.jpg"
+            <CardMedia
+                image={`https://picsum.photos/200/300/?random&${Math.random() * 100}`}
+                height="200px"
                 title="Paella dish"
             />
             <CardContent>
-                <Typography component="h1">
-                    Shrimp and Chorizo Paella
-                </Typography>
+                <h1>{loremIpsum({ count: 5, units: 'words' })}</h1>
+                <p>{loremIpsum({ count: 25, units: 'words' })}</p>
             </CardContent>
         </Card>
     )
