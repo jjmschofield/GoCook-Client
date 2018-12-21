@@ -1,12 +1,12 @@
 // @flow
 import React from 'react';
-import MainNav from "../../components/nav/MainNav";
 import MainContent from "../../components/sections/MainContent";
+import AppBar from "../../components/nav/AppBar/AppBar";
 
 const ShoppingView = () => {
     return (
         <React.Fragment>
-            <MainNav/>
+            <AppBar/>
             <MainContent>
                 <h1>Shopping</h1>
             </MainContent>

@@ -10,7 +10,7 @@ import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import PersonIcon from '@material-ui/icons/Person';
 
 import MobileNavButton from './MobileNavButton';
-import { ROUTES } from '../../routes';
+import { ROUTES } from '../../../routes/index';
 
 type Props = {
     history: any,

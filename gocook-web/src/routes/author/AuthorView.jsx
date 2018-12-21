@@ -1,12 +1,13 @@
 // @flow
 import React from 'react';
-import MainNav from "../../components/nav/MainNav";
+
 import MainContent from "../../components/sections/MainContent";
+import AppBar from "../../components/nav/AppBar/AppBar";
 
 const AuthorView = () => {
     return (
         <React.Fragment>
-            <MainNav/>
+            <AppBar/>
             <MainContent>
                 <h1>Author Recipes</h1>
             </MainContent>

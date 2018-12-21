@@ -1,13 +1,13 @@
 import React from 'react';
 
 import LogoutButton from '../../components/inputs/LogoutButton';
-import MainNav from "../../components/nav/MainNav";
 import MainContent from "../../components/sections/MainContent";
+import AppBar from "../../components/nav/AppBar/AppBar";
 
 const UserProfileView = ({ auth }) => {
     return (
         <React.Fragment>
-            <MainNav/>
+            <AppBar/>
             <MainContent>
                 <h1>Profile</h1>
                 <LogoutButton auth={auth}/>

@@ -1,60 +1,55 @@
 // @flow
 import React from 'react';
-import styled from 'styled-components';
 
-import MainNav from '../../components/nav/MainNav';
+import AppBar from '../../components/nav/AppBar/AppBar';
+import MainNav from '../../components/nav/MainNav/MainNav';
 import HorizontalScrollSection from '../../components/sections/HorizontalScrollSection';
 import RecipeCard from '../../components/cards/RecipeCard';
 import MainContent from '../../components/sections/MainContent';
 
-
-const StyledRecipeCard = styled(RecipeCard)`
-    width: 250px
-`;
-
 const BrowseView = () => {
     return (
         <React.Fragment>
-            <MainNav/>
+            <AppBar/>
             <MainContent>
                 <h1>Indian</h1>
                 <HorizontalScrollSection>
-                    <StyledRecipeCard/>
-                    <StyledRecipeCard/>
-                    <StyledRecipeCard/>
-                    <StyledRecipeCard/>
-                    <StyledRecipeCard/>
-                    <StyledRecipeCard/>
-                    <StyledRecipeCard/>
-                    <StyledRecipeCard/>
-                    <StyledRecipeCard/>
-                    <StyledRecipeCard/>
+                    <RecipeCard/>
+                    <RecipeCard/>
+                    <RecipeCard/>
+                    <RecipeCard/>
+                    <RecipeCard/>
+                    <RecipeCard/>
+                    <RecipeCard/>
+                    <RecipeCard/>
+                    <RecipeCard/>
+                    <RecipeCard/>
                 </HorizontalScrollSection>
                 <h1>Thai</h1>
                 <HorizontalScrollSection>
-                    <StyledRecipeCard/>
-                    <StyledRecipeCard/>
-                    <StyledRecipeCard/>
-                    <StyledRecipeCard/>
-                    <StyledRecipeCard/>
-                    <StyledRecipeCard/>
-                    <StyledRecipeCard/>
-                    <StyledRecipeCard/>
-                    <StyledRecipeCard/>
-                    <StyledRecipeCard/>
+                    <RecipeCard/>
+                    <RecipeCard/>
+                    <RecipeCard/>
+                    <RecipeCard/>
+                    <RecipeCard/>
+                    <RecipeCard/>
+                    <RecipeCard/>
+                    <RecipeCard/>
+                    <RecipeCard/>
+                    <RecipeCard/>
                 </HorizontalScrollSection>
                 <h1>Italian</h1>
                 <HorizontalScrollSection>
-                    <StyledRecipeCard/>
-                    <StyledRecipeCard/>
-                    <StyledRecipeCard/>
-                    <StyledRecipeCard/>
-                    <StyledRecipeCard/>
-                    <StyledRecipeCard/>
-                    <StyledRecipeCard/>
-                    <StyledRecipeCard/>
-                    <StyledRecipeCard/>
-                    <StyledRecipeCard/>
+                    <RecipeCard/>
+                    <RecipeCard/>
+                    <RecipeCard/>
+                    <RecipeCard/>
+                    <RecipeCard/>
+                    <RecipeCard/>
+                    <RecipeCard/>
+                    <RecipeCard/>
+                    <RecipeCard/>
+                    <RecipeCard/>
                 </HorizontalScrollSection>
             </MainContent>
         </React.Fragment>
