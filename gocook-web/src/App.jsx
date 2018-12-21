@@ -1,9 +1,8 @@
 // @flow
 import React, { Component } from 'react';
-import { Auth } from './lib/auth'
 
+import { Auth } from './lib/auth'
 import { Router } from "./routes";
-import MobileMainNav from "./components/nav/MobileMainNav";
 
 type Props = {
     auth: Auth,
