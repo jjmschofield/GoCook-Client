@@ -17,7 +17,7 @@ const MobileNavButton = ({ route, icon, onClick, className, active = false }) =>
 export default styled(MobileNavButton)`
         display: flex;
         flex-grow: 1;
-        borderRadius: 0px;
+        border-radius: 0px;
         color: rgba(0,0,0,0.3);
         
         ${props => props.active && `
