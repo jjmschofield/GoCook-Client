@@ -1,13 +1,10 @@
 //@flow
 import axios from 'axios';
+import config from '../../config';
 import { Auth } from '../auth';
-import Recipe from '../../models/RecipeModel'
+import Recipe from '../../models/RecipeModel';
 
-const baseUrl = 'https://go-cook.herokuapp.com';
-
-const endpoints = {
-    recipes: '/recipes'
-};
+const baseUrl = config.RECIPES_API.BASE;
 
 const getDefaultHeaders = async (auth: Auth) => {
     const accessToken = await auth.getAccessToken();
@@ -21,7 +18,7 @@ export const getAllRecipes = async (auth: Auth) => {
     try {
         const headers = await getDefaultHeaders(auth);
 
-        const response = await axios.get(baseUrl + endpoints.recipes, { headers });
+        const response = await axios.get(baseUrl, { headers });
 
         const recipes = response.data.map((recipe) => Recipe.FromApiResponse(recipe));
 
@@ -37,7 +34,7 @@ export const getRecipeById = async (auth: Auth, id: string) => {
     try {
         const headers = await getDefaultHeaders(auth);
 
-        const response = await axios.get(baseUrl + endpoints.recipes + `/${id}`, { headers });
+        const response = await axios.get(baseUrl + `/${id}`, { headers });
 
         const recipe = Recipe.FromApiResponse(response.data);
 
