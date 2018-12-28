@@ -12,6 +12,21 @@ $ yarn install
 $ yarn start
 ```
 
+## Configuration
+Configurations are controlled in `./src/config`. You will find a default config and a config for each environment in this module.
+
+To specify a configuration at run or build time set the `REACT_APP_ENV` process.env.
+
+For example:
+
+```
+$ REACT_APP_ENV=prod npm run build
+Will build for production
+
+$ REACT_APP_ENV=dev npm start
+Will run the app for dev
+```
+
 ## Tests
 To run the tests do:
 
