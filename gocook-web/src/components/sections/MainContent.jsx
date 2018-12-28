@@ -1,7 +1,12 @@
 import React from 'react'
 import styled from 'styled-components';
 
-const MainContent = ({ children, className }) => {
+const MainContent = ({ children, className, loaded = true }) => {
+    if (!loaded) {
+        return null;
+
+    }
+
     return (
         <section className={className}>
             {children}

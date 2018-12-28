@@ -33,56 +33,52 @@ class BrowseView extends React.Component<Props, State> {
     }
 
     render() {
-        if(this.state.loaded){
-            return (
-                <React.Fragment>
-                    <AppBar/>
-                    <MainContent>
-                        <h1>Indian</h1>
-                        <HorizontalScrollSection>
-                            <RecipeCard/>
-                            <RecipeCard/>
-                            <RecipeCard/>
-                            <RecipeCard/>
-                            <RecipeCard/>
-                            <RecipeCard/>
-                            <RecipeCard/>
-                            <RecipeCard/>
-                            <RecipeCard/>
-                            <RecipeCard/>
-                        </HorizontalScrollSection>
-                        <h1>Thai</h1>
-                        <HorizontalScrollSection>
-                            <RecipeCard/>
-                            <RecipeCard/>
-                            <RecipeCard/>
-                            <RecipeCard/>
-                            <RecipeCard/>
-                            <RecipeCard/>
-                            <RecipeCard/>
-                            <RecipeCard/>
-                            <RecipeCard/>
-                            <RecipeCard/>
-                        </HorizontalScrollSection>
-                        <h1>Italian</h1>
-                        <HorizontalScrollSection>
-                            <RecipeCard/>
-                            <RecipeCard/>
-                            <RecipeCard/>
-                            <RecipeCard/>
-                            <RecipeCard/>
-                            <RecipeCard/>
-                            <RecipeCard/>
-                            <RecipeCard/>
-                            <RecipeCard/>
-                            <RecipeCard/>
-                        </HorizontalScrollSection>
-                    </MainContent>
-                </React.Fragment>
-            );
-        }
-
-        return null;
+        return (
+            <React.Fragment>
+                <AppBar/>
+                <MainContent loaded={this.state.loaded}>
+                    <h1>Indian</h1>
+                    <HorizontalScrollSection>
+                        <RecipeCard/>
+                        <RecipeCard/>
+                        <RecipeCard/>
+                        <RecipeCard/>
+                        <RecipeCard/>
+                        <RecipeCard/>
+                        <RecipeCard/>
+                        <RecipeCard/>
+                        <RecipeCard/>
+                        <RecipeCard/>
+                    </HorizontalScrollSection>
+                    <h1>Thai</h1>
+                    <HorizontalScrollSection>
+                        <RecipeCard/>
+                        <RecipeCard/>
+                        <RecipeCard/>
+                        <RecipeCard/>
+                        <RecipeCard/>
+                        <RecipeCard/>
+                        <RecipeCard/>
+                        <RecipeCard/>
+                        <RecipeCard/>
+                        <RecipeCard/>
+                    </HorizontalScrollSection>
+                    <h1>Italian</h1>
+                    <HorizontalScrollSection>
+                        <RecipeCard/>
+                        <RecipeCard/>
+                        <RecipeCard/>
+                        <RecipeCard/>
+                        <RecipeCard/>
+                        <RecipeCard/>
+                        <RecipeCard/>
+                        <RecipeCard/>
+                        <RecipeCard/>
+                        <RecipeCard/>
+                    </HorizontalScrollSection>
+                </MainContent>
+            </React.Fragment>
+        );
     }
 }
 
