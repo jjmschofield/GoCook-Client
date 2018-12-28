@@ -50,4 +50,5 @@ This was a little bit hookey to setup - as Heroku is not expecting a project to 
 $ heroku buildpacks:set https://github.com/timanovsky/subdir-heroku-buildpack -a go-cook-web
 $ heroku buildpacks:add heroku/nodejs -a go-cook-web
 $ heroku config:set PROJECT_PATH=gocook-web -a go-cook-web
+$ heroku config:set REACT_APP_ENV=prod -a go-cook-web
 ```
