@@ -2,7 +2,7 @@
 import axios from 'axios';
 import config from '../../config';
 import { Auth } from '../auth';
-import Recipe from '../../models/RecipeModel';
+import Recipe from '../../store/recipes/models/RecipeModel';
 
 const baseUrl = config.RECIPES_API.BASE;
 
