@@ -4,10 +4,6 @@ import React, { Component } from 'react';
 import { Auth } from './lib/auth'
 import { Router } from "./routes";
 
-import config from './config';
-
-console.log(config);
-
 type Props = {
     auth: Auth,
 };
