@@ -4,7 +4,7 @@ import { Redirect, Route, Switch } from "react-router";
 import { authRestricted } from "../lib/auth/index";
 import HomeView from "./home/HomeView";
 import AuthorView from "./author/AuthorView";
-import BrowseView from "./browse/BrowseView";
+import BrowseView from "./browse/BrowseViewContainer";
 import FavoritesView from "./favorites/FavoritesView";
 import ShoppingView from "./shopping/ShoppingView";
 import LoginCallbackView from "./login/LoginCallbackView";

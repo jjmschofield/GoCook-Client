@@ -15,13 +15,12 @@ export type Config = {
 
 const getConfig = (): Config => {
     const env: string = process.env.REACT_APP_ENV || 'dev';
-
     console.log(`Using configuration for ${env}`);
 
-    switch (process.env.REACT_APP_ENV) {
-        case('prod'):
+    switch (env) {
+        case 'prod':
             return Object.assign({}, defaultConfig, prodConfig);
-        case('dev'):
+        case 'dev':
             return Object.assign({}, defaultConfig, devConfig);
         default:
             console.warn(`No known configuration for ${env}. Using default config.`);
